@@ -72,4 +72,3 @@
 - Consider a table with attributes as `e_id`, `e_name`, `e_zip`, `e_state`.
 - `e_id` -> `e_zip` and `e_zip` -> `e_state`, then `e_id` -> `e_state`.
 - If for any two employees having unique `e_id` and `e_name` are living in same state, then their `e_zip` and `e_state` will be same and if at any point the name of the state was changed by the government, then we will again have to update many rows.
-- 
