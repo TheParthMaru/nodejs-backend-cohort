@@ -72,3 +72,29 @@
 - Consider a table with attributes as `e_id`, `e_name`, `e_zip`, `e_state`.
 - `e_id` -> `e_zip` and `e_zip` -> `e_state`, then `e_id` -> `e_state`.
 - If for any two employees having unique `e_id` and `e_name` are living in same state, then their `e_zip` and `e_state` will be same and if at any point the name of the state was changed by the government, then we will again have to update many rows.
+
+# DB Keys
+- Set of attributes that helps us to uniquely identify a record in different situations.
+
+## Super key
+- Set of attributes within a table that can uniquely identify a record.
+- For eg, if we have a table with 3 columns as e_id, e_name and e_phone, we can uniquely identify every employee as a set of {e_id, (e_id, e_name), e_phone, (e_name, e_phone), ....}
+- This set is called a super key.
+
+## Candidate key
+- The minimum set of attributes that can uniquely identify a record.
+- For eg, just the e_id or e_phone can help us to identiy the employee uniquely.
+- Hence, both of these are different candidate keys.
+
+## Composite key
+- Key that consists of two or more than two attributes that together uniquely identify a record.
+- The attributes that form the composite key are not any keys independently.
+![alt text](image-1.png)
+- For eg, in the above example, we cannot uniquely identify a student just by using s_id or course_id or marks.
+- We would require a combination of s_id and course_id.
+
+## Primary key
+- Just a candidate key but it should be not-null.
+
+## Foreign key
+- It is an attribute which is primary key in some other table.
